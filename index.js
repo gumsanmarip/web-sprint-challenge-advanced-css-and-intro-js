@@ -245,19 +245,24 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-const century = "1900 - 2000";
-const yearsArray = century.split ( " - ")
-
-const artistYears = [];
-  for(let i = 0; i < array.length; i++){
-    if(){
-
+    const arts = {
+    
+      year: function(){
+        for(let i = 0; i < array.length; i++){
+        const livedYears = array[i].years
+        const numbers = livedYears.split(' - ');
+        if(numbers >= 1900 && numbers <=2000){
+          return this.year = numbers;
+        }
+      }
     }
   }
+  array.push(arts);
+  return arts;
 }
-
   
-console.log(yearsArray)
+  
+console.log('task 4', get20s(artists))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 

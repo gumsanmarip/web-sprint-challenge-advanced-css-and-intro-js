@@ -245,23 +245,16 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-    const arts = {
-    
-      year: function(){
-        for(let i = 0; i < array.length; i++){
-        const livedYears = array[i].years
-        const numbers = livedYears.split(' - ');
-        if(numbers >= 1900 && numbers <=2000){
-          return this.year = numbers;
-        }
+    const arts = [];
+    for(let i = 0; i < array.length; i++){
+      const livedYears = array[i].years
+      const yearsArray = livedYears.split(' - ');
+      if(yearsArray >= '1900' && yearsArray <= '2000'){
+        arts.push(array[i].name);
       }
-    }
-  }
-  array.push(arts);
+    }  
   return arts;
 }
-  
-  
 console.log('task 4', get20s(artists))
 
 
